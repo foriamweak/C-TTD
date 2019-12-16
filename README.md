@@ -1,5 +1,18 @@
 # C-TTD
 Context-Based Ternary Tree Decision Method in Versatile Video Coding for Fast Intra Coding (Access, 2019)
+Link: https://ieeexplore.ieee.org/abstract/document/8915688
+
+# Time Measure for BT/TT
+Encoding time of CUs for BT and TT is measured on top of official VTM software. Thus, one needs to know how to handle VTM encoding.
+
+Languague features: 
+	- C++11
+	- Supported Compilers: MS Visual Studio 2015/2017, GCC 5.4/7.3, Xcode/clang	
+
+Description:
+  - Global variables that measures BT/TT times. Herein we measure the time for only "xCheckRDCostIntra" that conducts intra prediction and the associated T/Q processes.
+  - Parent CU should inherit what the type of BT/TT is for sub-CUs to child CUs. Then, the child CUs can know what the current tree type is.
+  - Measure the time for intra prediction and accumulate the time per tree type. That means, BT and TT time of Fig. 1 in the paper precisely means intra prediction time per each tree type.
 
 # Citation
 S. Park and J. Kang, "Context-Based Ternary Tree Decision Method in Versatile Video Coding for Fast Intra Coding," in IEEE Access, vol. 7, pp. 172597-172605, 2019.
