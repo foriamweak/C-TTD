@@ -13,6 +13,8 @@ Example of installation using MS Visual Studio on Windows:
     * cd build
     * cmake .. -G "Visual Studio 14 2015 Win64"
 - GUI-based version:
+   * Ensure that the address for building binaries should contain a folder named "build" as shown in the below figure.
+   * Configure --> Generate
    ![Image of Cmake](fig/cmake_1.PNG)
 
 # Time Measure for BT/TT
