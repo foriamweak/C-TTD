@@ -13,7 +13,7 @@ Example of installation using MS Visual Studio on Windows:
     * cd build
     * cmake .. -G "Visual Studio 14 2015 Win64"
 - GUI-based version:
-
+   ![Image of Cmake](fig/cmake_1.PNG)
 
 # Time Measure for BT/TT
 Encoding time of CUs for BT and TT is measured on top of official VTM software. Thus, one needs to know how to handle VTM encoding.
