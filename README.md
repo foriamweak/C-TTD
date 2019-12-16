@@ -2,12 +2,25 @@
 Context-Based Ternary Tree Decision Method in Versatile Video Coding for Fast Intra Coding (Access, 2019)
 Link: https://ieeexplore.ieee.org/abstract/document/8915688
 
+# Installation and compilation
+Official VTM software can be downloaded from GitLab server at: https://vcgit.hhi.fraunhofer.de/jvet/VVCSoftware_VTM
+
+Build recommendation: using CMake.
+
+Example of installation using MS Visual Studio on Windows:
+- You need Visual Studio 2015/2017 and recent CMake.
+- Plain version: 
+    * cd build
+    * cmake .. -G "Visual Studio 14 2015 Win64"
+- GUI-based version:
+
+
 # Time Measure for BT/TT
 Encoding time of CUs for BT and TT is measured on top of official VTM software. Thus, one needs to know how to handle VTM encoding.
 
 Languague features: 
-  - C++11
-  - Supported Compilers: MS Visual Studio 2015/2017, GCC 5.4/7.3, Xcode/clang	
+  * C++11
+  * Supported Compilers: MS Visual Studio 2015/2017, GCC 5.4/7.3, Xcode/clang	
 
 Description:
   - Global variables that measures BT/TT times. Herein we measure the time for only "xCheckRDCostIntra" that conducts intra prediction and the associated T/Q processes.
