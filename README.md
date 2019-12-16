@@ -6,8 +6,8 @@ Link: https://ieeexplore.ieee.org/abstract/document/8915688
 Encoding time of CUs for BT and TT is measured on top of official VTM software. Thus, one needs to know how to handle VTM encoding.
 
 Languague features: 
-	- C++11
-	- Supported Compilers: MS Visual Studio 2015/2017, GCC 5.4/7.3, Xcode/clang	
+  - C++11
+  - Supported Compilers: MS Visual Studio 2015/2017, GCC 5.4/7.3, Xcode/clang	
 
 Description:
   - Global variables that measures BT/TT times. Herein we measure the time for only "xCheckRDCostIntra" that conducts intra prediction and the associated T/Q processes.
