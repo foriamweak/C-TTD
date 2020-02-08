@@ -19,6 +19,7 @@ Example of installation using MS Visual Studio on Windows:
 
 # Proposed Method for TT (As in the paper)
 Entire solution for the proposed method written in C++ under VS2017: [code](proposed_method)
+
 The core part of the propsoed method is in [EncoderLib](proposed_method/source/Lib/EncoderLib/). Particulary, see "EncCu.cpp"
 
 # Time Measure for BT/TT
