@@ -18,7 +18,8 @@ Example of installation using MS Visual Studio on Windows:
    ![Image of Cmake](fig/cmake_1.PNG)
 
 # Proposed Method for TT (As in the paper)
-![code](proposed_method)
+Entire solution for the proposed method written in C++ under VS2017: [code](proposed_method)
+The core part of the propsoed method is in [EncoderLib](proposed_method/source/Lib/EncoderLib/). Particulary, see "EncCu.cpp"
 
 # Time Measure for BT/TT
 Encoding time of CUs for BT and TT is measured on top of official VTM software. Thus, one needs to know how to handle VTM encoding.
