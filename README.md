@@ -17,6 +17,9 @@ Example of installation using MS Visual Studio on Windows:
    * Configure --> Generate
    ![Image of Cmake](fig/cmake_1.PNG)
 
+# Proposed Method for TT (As in the paper)
+![code](proposed_method)
+
 # Time Measure for BT/TT
 Encoding time of CUs for BT and TT is measured on top of official VTM software. Thus, one needs to know how to handle VTM encoding.
 
