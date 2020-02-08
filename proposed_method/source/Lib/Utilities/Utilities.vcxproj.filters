@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\source\Lib\Utilities\ColourRemapping.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\source\Lib\Utilities\VideoIOYuv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\source\Lib\Utilities\program_options_lite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\source\Lib\Utilities\ColourRemapping.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\source\Lib\Utilities\VideoIOYuv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\source\Lib\Utilities\program_options_lite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\source\Lib\Utilities\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\source\VisualStudio\common.natvis">
+      <Filter>Natvis Files</Filter>
+    </Natvis>
+    <Natvis Include="C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\source\VisualStudio\static_vector.natvis">
+      <Filter>Natvis Files</Filter>
+    </Natvis>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{D2BDC82A-8F8A-3CEE-815B-4514D1596588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Natvis Files">
+      <UniqueIdentifier>{330F081B-EB3C-3220-8B1E-E1FFB0CC07A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{01A4B594-7E8C-30A3-9E9E-1EC6A91A0DE9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

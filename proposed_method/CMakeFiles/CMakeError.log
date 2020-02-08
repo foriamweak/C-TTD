@@ -1,0 +1,38 @@
+Determining if the include file pthread.h exists failed with the following output:
+Change Dir: C:/Users/seasik_corner/source/repos/foriamweak/C-TTD/proposed_method/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_adae7.vcxproj" "/p:Configuration=Debug" "/p:Platform=x64" "/p:VisualStudioVersion=15.0"
+.NET Framework용 Microsoft (R) Build Engine 버전 15.9.21+g9802d43bc3
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+빌드 시작: 2020-02-08 오후 9:21:58
+1 노드의 "C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\CMakeFiles\CMakeTmp\cmTC_adae7.vcxproj" 프로젝트(기본 대상)입니다.
+PrepareForBuild:
+  "cmTC_adae7.dir\Debug\" 디렉터리를 만들고 있습니다.
+  "C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\CMakeFiles\CMakeTmp\Debug\" 디렉터리를 만들고 있습니다.
+  "cmTC_adae7.dir\Debug\cmTC_adae7.tlog\" 디렉터리를 만들고 있습니다.
+InitializeBuildStatus:
+  "AlwaysCreate"이(가) 지정되었기 때문에 "cmTC_adae7.dir\Debug\cmTC_adae7.tlog\unsuccessfulbuild"을(를) 만들고 있습니다.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_adae7.dir\Debug\\" /Fd"cmTC_adae7.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue "C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  Microsoft (R) C/C++ 최적화 컴파일러 버전 19.16.27026.1(x64)
+  Copyright (c) Microsoft Corporation. All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_adae7.dir\Debug\\" /Fd"cmTC_adae7.dir\Debug\vc141.pdb" /Gd /TC /errorReport:queue "C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: 포함 파일을 열 수 없습니다. 'pthread.h': No such file or directory [C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\CMakeFiles\CMakeTmp\cmTC_adae7.vcxproj]
+"C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\CMakeFiles\CMakeTmp\cmTC_adae7.vcxproj" 프로젝트를 빌드했습니다(기본 대상). - 실패
+
+빌드하지 못했습니다.
+
+"C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\CMakeFiles\CMakeTmp\cmTC_adae7.vcxproj"(기본 대상)(1)->
+(ClCompile 대상) -> 
+  C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: 포함 파일을 열 수 없습니다. 'pthread.h': No such file or directory [C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\CMakeFiles\CMakeTmp\cmTC_adae7.vcxproj]
+
+    경고 0개
+    오류 1개
+
+경과 시간: 00:00:00.36
+
+

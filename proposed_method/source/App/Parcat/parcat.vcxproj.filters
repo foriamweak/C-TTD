@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\source\App\Parcat\parcat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\seasik_corner\source\repos\foriamweak\C-TTD\proposed_method\source\App\Parcat\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{01A4B594-7E8C-30A3-9E9E-1EC6A91A0DE9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
