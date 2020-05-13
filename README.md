@@ -2,6 +2,9 @@
 Context-Based Ternary Tree Decision Method in Versatile Video Coding for Fast Intra Coding (Access, 2019)
 Link: https://ieeexplore.ieee.org/abstract/document/8915688
 
+# Revision history
+Fix the error in TEncCu.cpp in proposed_method folder, May 13, 2020
+
 # Installation and compilation
 Official VTM software can be downloaded from GitLab server at: https://vcgit.hhi.fraunhofer.de/jvet/VVCSoftware_VTM
 
