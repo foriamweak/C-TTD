@@ -767,7 +767,16 @@ void EncCu::xCompressCU( CodingStructure *&tempCS, CodingStructure *&bestCS, Par
 #if JVET_M0246_AFFINE_AMVR
   m_pcInterSearch->resetSavedAffineMotion();
 #endif
-
+  int bestBTDir = ETM_INVALID;
+  double bestCost = MAX_DOUBLE;
+  bool isBTTTChecked = false;
+  const int num_tcost = 3;
+  double currCost = MAX_DOUBLE;
+  double treeCost[num_tcost];
+  for (int i = 0; i < num_tcost; i++)
+  {
+    treeCost[i] = MAX_DOUBLE;
+  }
   do
   {
     EncTestMode currTestMode = m_modeCtrl->currTestMode();
@@ -852,6 +861,8 @@ void EncCu::xCompressCU( CodingStructure *&tempCS, CodingStructure *&bestCS, Par
     else if( currTestMode.type == ETM_INTRA )
     {
       xCheckRDCostIntra( tempCS, bestCS, partitioner, currTestMode );
+      if (!bestCS->pus.empty() && bestCS->cost != MAX_DOUBLE)
+        currCost = bestCS->cost;
     }
     else if( currTestMode.type == ETM_IPCM )
     {
@@ -867,12 +878,40 @@ void EncCu::xCompressCU( CodingStructure *&tempCS, CodingStructure *&bestCS, Par
     }
     else if( isModeSplit( currTestMode ) )
     {
-
+      if (bestBTDir == ETM_SPLIT_BT_H && currTestMode.type == ETM_SPLIT_TT_H
+        && tempCS->picture->Y().contains(tempCS->area.lumaPos()))
+        continue;
+      else if (bestBTDir == ETM_SPLIT_BT_V && currTestMode.type == ETM_SPLIT_TT_V
+        && tempCS->picture->Y().contains(tempCS->area.lumaPos()))
+        continue;
       xCheckModeSplit( tempCS, bestCS, partitioner, currTestMode
         , tempMotCandLUTs
         , bestMotCandLUTs
         , partitioner.currArea()
       );
+      if (tempCS->cost != MAX_DOUBLE && currCost != MAX_DOUBLE)
+      {
+        if (currTestMode.type == ETM_SPLIT_QT)
+        {
+          if (bestCS->cus.size() > 1)
+            treeCost[0] = bestCS->cost;
+          else
+            treeCost[0] = tempCS->cost;
+        }
+        else if (currTestMode.type > ETM_SPLIT_QT && currTestMode.type <= ETM_SPLIT_BT_V)
+        {
+          if (treeCost[0] > bestCS->cost && currCost > bestCS->cost 
+            && treeCost[1] > bestCS->cost && treeCost[2] > bestCS->cost)
+            treeCost[currTestMode.type - ETM_SPLIT_QT] = bestCS->cost;
+          else
+            treeCost[currTestMode.type - ETM_SPLIT_QT] = tempCS->cost;
+          if (currTestMode.type == ETM_SPLIT_BT_V && treeCost[1] != MAX_DOUBLE
+            && treeCost[2] != MAX_DOUBLE)
+          {
+            bestBTDir = treeCost[1] > treeCost[2] ? ETM_SPLIT_BT_V : ETM_SPLIT_BT_H;
+          }
+        }
+      }
     }
     else
     {
@@ -888,7 +927,12 @@ void EncCu::xCompressCU( CodingStructure *&tempCS, CodingStructure *&bestCS, Par
     setShareStateDec(m_shareState);
   }
 #endif
-
+  bestBTDir = ETM_INVALID;
+  bestCost = MAX_DOUBLE;
+  for (int i = 0; i < num_tcost; i++)
+  {
+    treeCost[i] = MAX_DOUBLE;
+  }
   //////////////////////////////////////////////////////////////////////////
   // Finishing CU
 #if ENABLE_SPLIT_PARALLELISM
